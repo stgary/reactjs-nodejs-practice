@@ -20,7 +20,9 @@ const initEvent = [
 
 export default function AppCalendar(props) {
   const [events, setEvents] = useState(initEvent);
+  
   console.log(moment().toDate());
+
   return (
     <div>
       <Cal
