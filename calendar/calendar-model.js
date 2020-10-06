@@ -5,5 +5,5 @@ module.exports = {
 }
 
 function getEvents() {
-  db('events')
+  return db('events');
 }

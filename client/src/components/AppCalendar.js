@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import axios from 'axios';
 
 import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
 
@@ -10,18 +11,21 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 const localizer = momentLocalizer(moment);
 const Cal = withDragAndDrop(Calendar);
 
-const initEvent = [
-  {
-    start: moment().toDate(),
-    end: moment().toDate(),
-    title: 'event',
-  },
-];
-
 export default function AppCalendar(props) {
-  const [events, setEvents] = useState(initEvent);
-  
-  console.log(moment().toDate());
+  const [events, setEvents] = useState([]);
+  const END_POINT = 'http://localhost:5000/cal';
+
+  useEffect(() => {
+    axios
+      .get(END_POINT)
+      .then(res => {
+        console.log(res.data);
+        setEvents(res.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },[]);
 
   return (
     <div>
