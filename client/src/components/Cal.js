@@ -27,14 +27,14 @@ export default function Cal() {
   }, []);
 
   const handleSelect = ({ start, end }) => {
-    const title = window.prompt('Enter a new event name');
+    const title = window.prompt('please enter a name');
 
     if(title) {
       
       axios
         .post(END_POINT, { start, end, title })
         .then(res => {
-          console.log(res);
+          console.log(res.data);
         })
         .catch(error => {
           console.log(error.message);
@@ -44,13 +44,13 @@ export default function Cal() {
     }
   }
 
-  const onSelectEvent = evt => {
-    const remove = window.confirm('Delete event?');
+  const onSelectEvent = e => {
+    const remove = window.confirm('confirm delete?');
 
     if(remove === true) {
 
       axios 
-        .delete(`http://localhost:5000/events/${evt.id}`)
+        .delete(`http://localhost:5000/events/${e.id}`)
         .then(res => {
           console.log(res.data);
         })
@@ -58,7 +58,7 @@ export default function Cal() {
           console.log(error.message);
         })
 
-      const index = events.indexOf(evt);
+      const index = events.indexOf(e);
       events.splice(index, 1);
 
       return events;
