@@ -3,7 +3,7 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import axios from 'axios';
 
-import "react-big-calendar/lib/css/react-big-calendar.css";
+// import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
 
@@ -68,7 +68,6 @@ export default function Cal() {
   return (
     <div className='cal'>
       <div className='cal-outer-container'>
-        <h1>Calendar</h1>
         <div className='cal-inner-container'>
           <Calendar
             defaultDate={moment().toDate()}
