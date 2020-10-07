@@ -28,14 +28,18 @@ export default function AppCalendar(props) {
   },[]);
 
   return (
-    <div>
-      <Cal
-        defaultDate={moment().toDate()}
-        defaultView="month"
-        events={events}
-        localizer={localizer}
-        style={{ height: "100vh" }}
-      />
+    <div className='cal'>
+      <div className='cal-outer-container'>
+        <h1>Calendar</h1>
+        <div className='cal-inner-container'>
+          <Cal
+            defaultDate={moment().toDate()}
+            defaultView="month"
+            events={events}
+            localizer={localizer}
+          />
+        </div>
+      </div>
     </div>
   )
 }
