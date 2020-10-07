@@ -2,7 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 
-const calRouter = require('../calendar/calendar-router.js');
+const eventsRouter = require('../events/events-router.js');
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(
   })
 );
 
-app.use('/cal', calRouter);
+app.use('/events', eventsRouter);
 
 app.get('/', (req, res) => {
   res.send({ confirmed: 'api working as intended' })

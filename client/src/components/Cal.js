@@ -7,10 +7,9 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
 
-export default function AppCalendar(props) {
+export default function Cal() {
   const [events, setEvents] = useState([]);
-  console.log(events);
-  const END_POINT = 'http://localhost:5000/cal';
+  const END_POINT = 'http://localhost:5000/events';
 
   useEffect(() => {
     axios
@@ -23,14 +22,24 @@ export default function AppCalendar(props) {
         setEvents(res.data);
       })
       .catch(error => {
-        console.log(error);
+        console.log(error.message);
       });
-  },[]);
+  }, []);
 
   const handleSelect = ({ start, end }) => {
     const title = window.prompt('Enter a new event name');
 
     if(title) {
+      
+      axios
+        .post(END_POINT, { start, end, title })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(error => {
+          console.log(error.message);
+        })
+
       setEvents([...events, { start, end, title }]);
     }
   }
@@ -39,8 +48,19 @@ export default function AppCalendar(props) {
     const remove = window.confirm('Delete event?');
 
     if(remove === true) {
+
+      axios 
+        .delete(`http://localhost:5000/events/${evt.id}`)
+        .then(res => {
+          console.log(res.data);
+        })
+        .catch(error => {
+          console.log(error.message);
+        })
+
       const index = events.indexOf(evt);
       events.splice(index, 1);
+
       return events;
     }
   }
