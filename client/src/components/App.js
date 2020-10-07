@@ -1,5 +1,5 @@
 import React from 'react';
-import AppCalendar from './app-calendar/AppCalendar';
+import AppCalendar from './AppCalendar';
 
 export default function App() {
   return (

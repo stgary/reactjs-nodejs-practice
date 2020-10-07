@@ -1,3 +1,4 @@
+const moment = require('moment');
 
 exports.seed = function(knex) {
   return knex('events').insert([

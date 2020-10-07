@@ -3,6 +3,8 @@ exports.up = function(knex) {
   return knex.schema
     .createTable('events', tbl => {
       tbl.increments();
+      
+      tbl.boolean('allDay').defaultTo(false);
 
       tbl.date('start').notNullable();
       tbl.date('end').notNullable();
