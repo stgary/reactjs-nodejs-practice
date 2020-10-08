@@ -1,0 +1,42 @@
+.tool-header {
+  margin: 0;
+  padding: 0;
+  background-color: #189b86;
+  height: 10%;
+  color: white;
+}
+
+.tool-header .tool-nav {
+  height: 80%;
+  background-color: #333333;
+  -webkit-box-shadow: -1px 7px 20px rgba(0, 0, 0, 0.658);
+          box-shadow: -1px 7px 20px rgba(0, 0, 0, 0.658);
+}
+
+.tool-header .tool-nav .tool-ul-container {
+  height: 100%;
+}
+
+.tool-header .tool-nav .tool-ul-container .tool-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Unica One', cursive;
+  font-size: 1.5rem;
+}
+
+.tool-header .tool-nav .tool-ul-container .tool-list .list-item {
+  height: 100%;
+  padding: 1%;
+}
+/*# sourceMappingURL=toolbar.css.map */

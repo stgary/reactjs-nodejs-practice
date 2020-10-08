@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Unica+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&display=swap");
 .rbc-btn {
   color: inherit;
   font: inherit;
@@ -70,7 +72,7 @@ button.rbc-input::-moz-focus-inner {
 }
 
 .rbc-off-range-bg {
-  background: #232323;
+  background: #333333;
 }
 
 .rbc-header {
@@ -147,16 +149,16 @@ button.rbc-input::-moz-focus-inner {
           flex-grow: 1;
   padding: 0 10px;
   text-align: center;
-  color: #333333;
+  color: #cacaca;
 }
 
 .rbc-toolbar button {
-  color: #fff;
+  color: #333;
   display: inline-block;
   margin: 0;
   text-align: center;
   vertical-align: middle;
-  background: #333333;
+  background: #cacaca;
   background-image: none;
   border: 1px solid #ccc;
   padding: .375rem 1rem;
@@ -174,19 +176,19 @@ button.rbc-input::-moz-focus-inner {
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button.rbc-active:focus {
-  color: #fff;
+  color: #333;
   background-color: #189e89;
   border-color: #8c8c8c;
 }
 
 .rbc-toolbar button:focus {
-  color: #fff;
+  color: #333;
   background-color: #189e89;
   border-color: #adadad;
 }
 
 .rbc-toolbar button:hover {
-  color: #fff;
+  color: #333;
   background-color: #189e89;
   border-color: #adadad;
 }
@@ -351,7 +353,7 @@ button.rbc-input::-moz-focus-inner {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #333333;
+  color: #333;
   background-color: #189e89;
   height: 3em;
   -webkit-box-shadow: inset -1px 1px 16px 0px #000000a8;
@@ -373,7 +375,7 @@ button.rbc-input::-moz-focus-inner {
   -ms-flex-preferred-size: 0px;
       flex-basis: 0px;
   overflow: hidden;
-  color: #a4a3a3;
+  color: #333333;
   height: 100%;
 }
 
@@ -851,10 +853,120 @@ button.rbc-input::-moz-focus-inner {
 }
 
 html, body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tool-header {
+  margin: 0;
+  padding: 0;
+  background-color: #189b86;
+  height: 10%;
+  color: white;
+}
+
+.tool-header .tool-nav {
+  height: 80%;
+  background-color: #333333;
+  -webkit-box-shadow: -1px 7px 20px rgba(0, 0, 0, 0.658);
+          box-shadow: -1px 7px 20px rgba(0, 0, 0, 0.658);
+}
+
+.tool-header .tool-nav .tool-ul-container {
+  height: 100%;
+}
+
+.tool-header .tool-nav .tool-ul-container .tool-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Unica One', cursive;
+  font-size: 1.5rem;
+}
+
+.tool-header .tool-nav .tool-ul-container .tool-list .list-item {
+  height: 100%;
+  padding: 1%;
+}
+
+html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #212020;
+  font-family: 'Fredoka One', cursive;
 }
 
 #root {
@@ -867,28 +979,161 @@ html, body {
 
 .cal {
   height: 100%;
-  margin: 5px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20%;
+}
+
+.left-logo {
+  font-size: 2rem;
+  color: #fff;
+  margin-left: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-logo {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.translate {
+  font-size: 1.25rem;
+  margin: 3%;
+}
+
+.app-name {
+  color: #fff;
+  font-size: 3.5rem;
+  letter-spacing: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cal-outer-container {
-  height: 100%;
+  height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cal-inner-container {
-  height: 100%;
+  height: 625px;
+  width: 50%;
+  margin: 1%;
+}
+
+.cal-left-section {
+  width: 28%;
+  height: 528px;
+  margin-left: 1%;
+  background: #cacaca;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 20px 5px #00000030;
+          box-shadow: inset 1px 1px 20px 5px #00000030;
+}
+
+.schedule-form-container {
+  height: 93%;
+  margin: 3%;
+  background: #ffffff8c;
+  border-radius: 5px;
+  border: 1px solid #949494a8;
+}
+
+.form-message {
+  font-size: 2rem;
+  font-family: 'Unica One', cursive;
+  margin: 70px;
+}
+
+.calendar-explanation {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-family: 'Asap Condensed', sans-serif;
+}
+
+.cal-right-section {
+  width: 28%;
+  height: 528px;
+  margin-right: 1%;
+  background: #cacaca;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 20px 5px #00000030;
+          box-shadow: inset 1px 1px 20px 5px #00000030;
+}
+
+.schedule-list-container {
+  height: 93%;
+  margin: 3%;
+  background: #ffffff8c;
+  border-radius: 5px;
+  border: 1px solid #949494a8;
 }
 
 .rbc-toolbar-label {
   font-family: 'Unica One', cursive;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .rbc-calendar * {
   font-family: 'Unica One', cursive;
 }
 
+.rbc-calendar {
+  height: 92.5%;
+}
+
 .rbc-month-view {
-  background-color: #333333;
+  background-color: #cacaca;
+  -webkit-box-shadow: inset 18px -18px 20px 6px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 18px -18px 20px 6px rgba(0, 0, 0, 0.125);
 }
 
 .rbc-toolbar button {

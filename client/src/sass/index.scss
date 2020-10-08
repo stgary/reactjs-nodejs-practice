@@ -1,11 +1,20 @@
 @import '../../node_modules/react-big-calendar/lib/sass/styles';
+@import 'globals';
+@import 'reset';
+@import 'variables';
+@import 'toolbar';
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&display=swap');
 
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #212020;
+  font-family: 'Fredoka One', cursive;
 }
 
 #root {
@@ -18,28 +27,123 @@ height: 100%;
 
 .cal {
   height: 100%;
-  margin: 5px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+}
+
+.left-logo {
+  font-size: 2rem;
+  color: #fff;
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-logo {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.translate {
+  font-size: 1.25rem;
+  margin: 3%;
+}
+
+.app-name {
+  color: #fff;
+  font-size: 3.5rem;
+  letter-spacing: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cal-outer-container {
-  height: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cal-inner-container {
-  height: 100%;
+  height: 625px;
+  width: 50%;
+  margin: 1%;
+}
+
+.cal-left-section {
+  width: 28%;
+  height: 528px;
+  margin-left: 1%;
+  background: #cacaca;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 20px 5px #00000030;
+}
+
+.schedule-form-container {
+  height: 93%;
+  margin: 3%;
+  background: #ffffff8c;
+  border-radius: 5px;
+  border: 1px solid #949494a8;
+}
+
+.form-message {
+  font-size: 2rem;
+  font-family: 'Unica One', cursive;
+  margin: 70px;
+}
+
+.calendar-explanation {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  font-family: 'Asap Condensed', sans-serif;
+}
+
+.cal-right-section {
+  width: 28%;
+  height: 528px;
+  margin-right: 1%;
+  background: #cacaca;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 20px 5px #00000030;
+}
+
+.schedule-list-container {
+  height: 93%;
+  margin: 3%;
+  background: #ffffff8c;
+  border-radius: 5px;
+  border: 1px solid #949494a8;
 }
 
 .rbc-toolbar-label {
   font-family: 'Unica One', cursive;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .rbc-calendar * {
   font-family: 'Unica One', cursive;
 }
 
+.rbc-calendar {
+  height: 92.5%;
+}
+
 .rbc-month-view {
-  background-color: #333333;
+  background-color: #cacaca;
+  box-shadow: inset 18px -18px 20px 6px rgba(0, 0, 0, 0.125);
 }
 
 .rbc-toolbar button {

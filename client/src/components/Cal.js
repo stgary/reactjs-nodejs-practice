@@ -67,7 +67,37 @@ export default function Cal() {
 
   return (
     <div className='cal'>
+      <div className='wrapper'>
+        <div className='left-logo'>自分自身を向上させます 
+          <br /> 
+            <span className='translate'>improve yourself !</span>
+        </div>
+        <div className='app-name'>HABITVIZ</div>
+        <div className='right-logo'>あなたの目標を達成する
+          <br /> 
+              <span className='translate'>achieve your goals !</span>
+        </div>
+      </div>
       <div className='cal-outer-container'>
+        <div className='cal-left-section'>
+          <div className='schedule-form-container'>
+              <span className='form-message'>create an event</span>
+              <form className='schedule-form'>
+                <input
+                  type='text'
+                  name='title'
+                />
+                <textarea 
+                  type='text'
+                  name='description'
+                />
+                <input
+                  type='submit'
+                  name='submit'
+                />
+              </form>
+          </div>
+        </div>
         <div className='cal-inner-container'>
           <Calendar
             defaultDate={moment().toDate()}
@@ -80,6 +110,11 @@ export default function Cal() {
             startAccessor='start'
             endAccessor='end'
           />
+        </div>
+        <div className='cal-right-section'>
+          <div className='schedule-list-container'>
+
+          </div>
         </div>
       </div>
     </div>
